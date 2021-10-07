@@ -1,0 +1,41 @@
+﻿
+body {
+  position:relative;
+  min-height:100vh;
+  padding-bottom:35px;
+}
+footer{
+    text-align:center;
+    background-color:black;
+    color:white;
+    padding:5px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+#main {
+    background-color: #01474a;
+    padding: 20px;
+    padding-bottom:20px;
+}
+.db {
+    background-color: white;
+    height: 85vh;
+    padding: 20px;
+    display: flex;
+}
+    .db .side-bar {
+        flex: 1;
+        height: 100%;
+        background: #01474a;
+    }
+    .db .content {
+        flex: 20;
+        height: 100%;
+        border: 1px solid green;
+    }
+    .db .side-bar ul{
+        list-style:none;
+        margin:0;
+       padding:15px;
+    }

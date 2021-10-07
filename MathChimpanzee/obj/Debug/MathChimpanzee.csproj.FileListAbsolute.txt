@@ -1,0 +1,18 @@
+C:\Users\alvina.arshad\Desktop\work\project work(Mental Math)\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.dll.config
+C:\Users\alvina.arshad\Desktop\work\project work(Mental Math)\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.dll
+C:\Users\alvina.arshad\Desktop\work\project work(Mental Math)\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.pdb
+C:\Users\alvina.arshad\Desktop\work\project work(Mental Math)\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.csprojResolveAssemblyReference.cache
+C:\Users\alvina.arshad\Desktop\work\project work(Mental Math)\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.dll
+C:\Users\alvina.arshad\Desktop\work\project work(Mental Math)\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.pdb
+C:\Users\Hamza.Tahir\Downloads\Mental-Math-alvina-main\Mental-Math-alvina-main\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.csprojResolveAssemblyReference.cache
+C:\Users\Hamza.Tahir\Downloads\Mental-Math-alvina-main\Mental-Math-alvina-main\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.dll
+C:\Users\Hamza.Tahir\Downloads\Mental-Math-alvina-main\Mental-Math-alvina-main\MathChimpanzee\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.dll.config
+C:\Users\Hamza.Tahir\Downloads\Mental-Math-alvina-main\Mental-Math-alvina-main\MathChimpanzee\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.dll
+C:\Users\Hamza.Tahir\Downloads\Mental-Math-alvina-main\Mental-Math-alvina-main\MathChimpanzee\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.pdb
+C:\Users\Hamza.Tahir\Downloads\Mental-Math-alvina-main\Mental-Math-alvina-main\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.pdb
+C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.dll.config
+C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.dll
+C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\bin\MathChimpanzee.pdb
+C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.dll
+C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.pdb
+C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.csprojAssemblyReference.cache
