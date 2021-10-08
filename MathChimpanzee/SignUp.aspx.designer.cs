@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MathChimpanzee {
-    
-    
-    public partial class Sign_Up {
-        
+namespace MathChimpanzee
+{
+
+
+    public partial class Sign_Up
+    {
+
         /// <summary>
         /// TextBox4 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace MathChimpanzee {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
-        
+
         /// <summary>
         /// TextBox1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace MathChimpanzee {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
+
         /// <summary>
         /// TextBox2 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace MathChimpanzee {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
-        
+
         /// <summary>
         /// TextBox3 control.
         /// </summary>
@@ -47,7 +49,16 @@ namespace MathChimpanzee {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
-        
+
+        /// <summary>
+        /// Age control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Age;
+
         /// <summary>
         /// Button8 control.
         /// </summary>

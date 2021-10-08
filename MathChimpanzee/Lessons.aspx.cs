@@ -11,17 +11,28 @@ namespace MathChimpanzee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
         }
 
         protected void Button9_Click(object sender, EventArgs e)
         {
             Response.Redirect("WebForm2.aspx?Lesson=1");
+
         }
         protected void Button8_Click(object sender, EventArgs e)
         {
-            Response.Redirect("WebForm2.aspx?Lesson=2");
+            if (2 > (Int32)Session["Progress"])
+            {
+                Response.Write("<script>alert('Lesson Locked');</script>");
+            }
+            else
+            {
+                Response.Redirect("WebForm2.aspx?Lesson=2");
+            }
+               
+            }
         }
     }
-}
+
 

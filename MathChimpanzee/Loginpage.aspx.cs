@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,7 +12,7 @@ namespace MathChimpanzee
 {
     public partial class Login_page : System.Web.UI.Page
     {
-        string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+        string strcon = ConfigurationManager.ConnectionStrings["con2"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,18 +28,40 @@ namespace MathChimpanzee
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from master_table where email='" + TextBox1.Text.Trim() + "' AND password='"+TextBox2.Text.Trim()+"'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from Users where email='" + TextBox1.Text.Trim() + "' AND password='"+TextBox2.Text.Trim()+"'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        Session["UserName"] = dr.GetValue(0).ToString();
+                        Session["Userid"] = dr.GetValue(0);
+                        Session["UserName"] = dr.GetValue(1).ToString();
                         Session["role"] = "user";
-                        Session["Status"] = dr.GetValue(5).ToString();
+                        Session["Status"] = dr.GetValue(4).ToString();
+                        
+                    }
+                    con.Close();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid credentials');</script>");
+                }
+                SqlConnection con2 = new SqlConnection(strcon);
+                if (con2.State == ConnectionState.Closed)
+                {
+                    con2.Open();
+                }
+                SqlCommand cmd1 = new SqlCommand("SELECT * from Customers where Name='" + (String)Session["UserName"] + "'", con2);
+                SqlDataReader dr2 = cmd1.ExecuteReader();
+                if (dr2.HasRows)
+                {
+                    while (dr2.Read())
+                    { 
+                        Session["Progress"] = Convert.ToInt32(dr2.GetValue(3));
                         Response.Redirect("Homepage.aspx");
                     }
                 }
+
                 else
                 {
                     Response.Write("<script>alert('Invalid credentials');</script>");
@@ -49,7 +70,7 @@ namespace MathChimpanzee
             }
             catch (Exception ex)
             {
-
+                throw (ex);
             }
         }
 

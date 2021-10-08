@@ -16,3 +16,12 @@ C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\Mat
 C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.dll
 C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.pdb
 C:\Users\alvina.arshad\Desktop\MathChimpanzee2\MathChimpanzee\MathChimpanzee\MathChimpanzee\obj\Debug\MathChimpanzee.csprojAssemblyReference.cache
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\bin\MathChimpanzee.dll.config
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\bin\MathChimpanzee.dll
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\bin\MathChimpanzee.pdb
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.csprojAssemblyReference.cache
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.dll
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.pdb
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\bin\Newtonsoft.Json.dll
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\bin\Newtonsoft.Json.xml
+C:\Users\Hamza.Tahir\Desktop\Mental Math  Repo2\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.csproj.CopyComplete

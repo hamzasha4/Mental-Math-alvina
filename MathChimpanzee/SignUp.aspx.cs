@@ -12,7 +12,7 @@ namespace MathChimpanzee
 {
     public partial class Sign_Up : System.Web.UI.Page
     {
-        string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+        string strcon = ConfigurationManager.ConnectionStrings["con2"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -24,11 +24,15 @@ namespace MathChimpanzee
             {
 
                 Response.Write("<script>alert('Member Already Exist with this Member ID, try other ID');</script>");
+               
             }
             else
-            {
-                signUpNewMember();
-                Response.Redirect("Homepage.aspx");
+            {  
+                if (signUpNewMember())
+                {
+                    redirectToPage();
+                }
+                
             }
         }
 
@@ -42,7 +46,7 @@ namespace MathChimpanzee
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from master_table where email='" + TextBox1.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from Users where email='" + TextBox1.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);               
@@ -61,7 +65,7 @@ namespace MathChimpanzee
                 return false;
             }
         }
-        void signUpNewMember()
+        bool signUpNewMember()
         {
             //Response.Write("<script>alert('Testing');</script>");
             try
@@ -71,26 +75,68 @@ namespace MathChimpanzee
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO master_table(UserName,email,password,Confirm_Password,Account_status) 
-            values(@UserName,@email,@password,@Confirm_Password,@Account_status)", con);
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO Users(UserName,email,password,Account_status) 
+            values(@UserName,@email,@password,@Account_status)",con);
                 cmd.Parameters.AddWithValue("@UserName", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@email", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox2.Text.Trim());
-                cmd.Parameters.AddWithValue("@Confirm_Password", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@Account_status", "pending");
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Sign Up Successful. Go to User Login to Login');</script>");
+                return true;
+                
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
             }
         }
 
-        protected void TextBox2_TextChanged(object sender, System.EventArgs e)
+        void redirectToPage()
         {
+            SqlConnection con = new SqlConnection(strcon);
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("SELECT * from Users where email='" + TextBox1.Text.Trim() + "';", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Session["UserId"] = dr.GetValue(0).ToString();
+                    Session["UserName"] = dr.GetValue(1).ToString();
+                    Session["role"] = "user";
+                    Session["Status"] = dr.GetValue(4).ToString();
+                    Session["Progress"] = 1;
+                    
+                }
+                con.Close();
+            }
+          
+            else
+            {
+                Response.Write("<script>alert('Invalid credentials');</script>");
+            }
+            SqlConnection con2 = new SqlConnection(strcon);
+            if (con2.State == ConnectionState.Closed)
+            {
+                con2.Open();
+            }
+            SqlCommand cmd1 = new SqlCommand(@"insert into Customers(Userid,Name,Age,Progress)values(@Userid,@Name,@Age,@progress)", con2);
+            cmd1.Parameters.AddWithValue("@Userid",Session["UserId"]);
+            cmd1.Parameters.AddWithValue("@Name", TextBox4.Text.Trim());
+            cmd1.Parameters.AddWithValue("@Age", Age.Text.Trim());
+            cmd1.Parameters.AddWithValue("@progress", 1);
+            cmd1.ExecuteNonQuery();
 
+            con2.Close();
+            Response.Redirect("Homepage.aspx");
         }
+
+
     }
 }

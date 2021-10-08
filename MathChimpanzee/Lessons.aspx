@@ -12,5 +12,9 @@
                            <asp:Button class="btn btn-info btn-block" ID="Button1" runat="server" Text="Lesson2" OnClick="Button8_Click" />
                         </div>
                      </div>
+        <div class="alert alert-danger alert-dismissible fade show">
+        <strong>Locekd!</strong> Finish the previous lesson to unlock it.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
 
 </asp:Content>

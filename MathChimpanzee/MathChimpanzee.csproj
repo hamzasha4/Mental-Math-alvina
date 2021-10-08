@@ -41,6 +41,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -62,6 +65,16 @@
   <ItemGroup>
     <Content Include="1\demo.css" />
     <Content Include="1\light-bootstrap-dashboard.css" />
+    <Content Include="Content\Images\finger-counting-pics\0.png" />
+    <Content Include="Content\Images\finger-counting-pics\1.png" />
+    <Content Include="Content\Images\finger-counting-pics\2.png" />
+    <Content Include="Content\Images\finger-counting-pics\3.png" />
+    <Content Include="Content\Images\finger-counting-pics\4.png" />
+    <Content Include="Content\Images\finger-counting-pics\5.png" />
+    <Content Include="Content\Images\finger-counting-pics\6.png" />
+    <Content Include="Content\Images\finger-counting-pics\7.png" />
+    <Content Include="Content\Images\finger-counting-pics\8.png" />
+    <Content Include="Content\Images\finger-counting-pics\9.png" />
     <Content Include="Dashboard.aspx" />
     <Content Include="fonts\nucleo-icons.svg" />
     <Content Include="HtmlPage1.html" />
@@ -137,6 +150,12 @@
     <Content Include="Fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="Fontawesome\webfonts\fa-solid-900.woff2" />
     <Content Include="1\bootstrap.min.css" />
+    <Content Include="Practice.aspx" />
+    <Content Include="QuizPage.aspx" />
+    <Content Include="Score.aspx" />
+    <Content Include="Scripts\mp7.js" />
+    <Content Include="Scripts\mp_practice.js" />
+    <Content Include="test.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="MM.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -150,6 +169,7 @@
     <None Include="MM.dbml.layout">
       <DependentUpon>MM.dbml</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1880,6 +1900,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MM.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\quiz.cs" />
+    <Compile Include="Models\quizscore.cs" />
     <Compile Include="page.aspx.cs">
       <DependentUpon>page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1887,7 +1909,28 @@
     <Compile Include="page.aspx.designer.cs">
       <DependentUpon>page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Practice.aspx.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Practice.aspx.designer.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuizPage.aspx.cs">
+      <DependentUpon>QuizPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuizPage.aspx.designer.cs">
+      <DependentUpon>QuizPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score.aspx.cs">
+      <DependentUpon>Score.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score.aspx.designer.cs">
+      <DependentUpon>Score.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1901,6 +1944,13 @@
     </Compile>
     <Compile Include="Site_Visit.aspx.designer.cs">
       <DependentUpon>Site_Visit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
