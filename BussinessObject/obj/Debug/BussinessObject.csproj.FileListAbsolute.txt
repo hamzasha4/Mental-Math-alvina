@@ -1,0 +1,6 @@
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\bin\Debug\BussinessObject.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\bin\Debug\BussinessObject.pdb
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.csproj.AssemblyReference.cache
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.csproj.CoreCompileInputs.cache
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.pdb

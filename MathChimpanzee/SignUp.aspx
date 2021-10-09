@@ -39,27 +39,26 @@
                      <div class="col">
                          <label>User Name</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Name"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtusername" runat="server" placeholder="Name"></asp:TextBox>
                         </div>
                         <label>Email</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="test@gmail.com"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="test@gmail.com"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" 
+                           <asp:TextBox CssClass="form-control" ID="txtpassword" runat="server" 
                                placeholder="Password" TextMode="Password"></asp:TextBox>
                         </div>
                          <label>Confirm Password</label>
                          <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" 
+                           <asp:TextBox CssClass="form-control" ID="txtconfirmpassword" runat="server" 
                                placeholder="Retype Password" TextMode="Password"></asp:TextBox><br>
                         </div>
                          <label>Age</label>
                          <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="Age" runat="server" 
-                               placeholder="Age" TextMode="Number" max="100" min="1">
-                           </asp:TextBox><br>
+                           <asp:TextBox CssClass="form-control" ID="txtage" runat="server" 
+                               placeholder="Age" TextMode="Number" max="100" min="1"></asp:TextBox><br>
                         </div>
                         <div class="form-group">
                            <asp:Button class="btn btn-info btn-block" ID="Button8" runat="server" Text="Sign Up" OnClick="Button8_Click" />

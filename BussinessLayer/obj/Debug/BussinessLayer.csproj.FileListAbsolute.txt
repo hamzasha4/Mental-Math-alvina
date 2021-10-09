@@ -1,0 +1,14 @@
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\BussinessObject.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\Microsoft.Owin.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\Owin.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\BussinessObject.pdb
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\bin\Debug\Microsoft.Owin.xml
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\obj\Debug\BussinessLayer.csproj.AssemblyReference.cache
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\obj\Debug\BussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessLayer\obj\Debug\BussinessLayer.pdb
