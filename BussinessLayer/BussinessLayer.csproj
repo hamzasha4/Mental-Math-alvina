@@ -49,7 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomersBL.cs" />
+    <Compile Include="LessonBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuizQuestionsBL.cs" />
+    <Compile Include="QuizResultBL.cs" />
     <Compile Include="UserBL.cs" />
   </ItemGroup>
   <ItemGroup>

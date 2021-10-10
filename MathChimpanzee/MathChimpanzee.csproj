@@ -93,6 +93,7 @@
     <Content Include="js\light-bootstrap-dashboard.js" />
     <Content Include="js\nouislider.min.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="LessonDisplay.aspx" />
     <Content Include="Lessons.aspx" />
     <Content Include="MasterPage.Master" />
     <Content Include="Fontawesome\less\brands.less" />
@@ -1866,6 +1867,13 @@
     </Compile>
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LessonDisplay.aspx.cs">
+      <DependentUpon>LessonDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LessonDisplay.aspx.designer.cs">
+      <DependentUpon>LessonDisplay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lessons.aspx.cs">
       <DependentUpon>Lessons.aspx</DependentUpon>
