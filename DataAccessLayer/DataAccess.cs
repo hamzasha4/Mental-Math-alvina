@@ -52,14 +52,15 @@ namespace DataAccessLayer
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO Users(UserName,email,password,Account_status,Age,Progress) 
-                values(@UserName,@email,@password,@Account_status,@age,@progress)", con);
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO Users(UserName,email,password,Account_status,Age,Progress,Role) 
+                values(@UserName,@email,@password,@Account_status,@age,@progress,@role)", con);
                 cmd.Parameters.AddWithValue("@UserName", userBO.UserName);
                 cmd.Parameters.AddWithValue("@email", userBO.email);
                 cmd.Parameters.AddWithValue("@password", userBO.password);
                 cmd.Parameters.AddWithValue("@Account_status", userBO.status);
                 cmd.Parameters.AddWithValue("@age", userBO.age);
                 cmd.Parameters.AddWithValue("@progress", userBO.progress);
+                cmd.Parameters.AddWithValue("@role", userBO.role);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 return true;
@@ -96,6 +97,52 @@ namespace DataAccessLayer
 
         }
 
+        public UserBO GetUSer(string email, string password)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * from Users where email='" + email + "' AND password='" + password + "'", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    UserBO user = new UserBO();
+                    while (dr.Read())
+                    {
+                        user.Userid = Convert.ToInt32(dr.GetValue(0));
+                        user.UserName = dr.GetValue(1).ToString();
+                        user.status = dr.GetValue(4).ToString();
+                        user.progress = Convert.ToInt32(dr.GetValue(6).ToString());
+                        user.role = dr.GetValue(8).ToString();
+                    }
+                    con.Close();
+                    return user;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+        //public int getQuizID(int lessonid, string date)
+        //{
+        //    SqlConnection con = new SqlConnection(strcon);
+        //    if (con.State == ConnectionState.Closed)
+        //    {
+        //        con.Open();
+        //    }
+        //    SqlCommand cmd = new SqlCommand("SELECT * from Users where Lessonid='" + lessonid + "' And date='"+date+"' ;", con);
+        //    SqlDataReader dr = cmd.ExecuteReader();
+        //}
+
         public int getUserID(string useremail)
         {
             SqlConnection con = new SqlConnection(strcon);
@@ -107,18 +154,16 @@ namespace DataAccessLayer
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
-                UserBO userBO = new UserBO();
+                int id = 0 ;
                 while (dr.Read())
                 {
-                    userBO.Userid = Convert.ToInt32(dr.GetValue(0));
-                    userBO.UserName = dr.GetValue(1).ToString();
+                   id  = Convert.ToInt32(dr.GetValue(0));
                 }
                 con.Close();
-                return userBO.Userid;
+                return id;
             }
 
             return 0;
-
         }
 
         public LessonBO getLesson(int id)
@@ -146,12 +191,9 @@ namespace DataAccessLayer
                 else {
                     return null;
                 }
-                
-
             }
             catch (Exception)
             {
-
                 throw;
             }
 

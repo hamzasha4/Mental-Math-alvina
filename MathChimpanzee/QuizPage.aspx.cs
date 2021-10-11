@@ -17,23 +17,21 @@ namespace MathChimpanzee
 {
     public partial class QuizPage : System.Web.UI.Page
     {
-        string strcon = ConfigurationManager.ConnectionStrings["con2"].ConnectionString;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!IsPostBack && Request.QueryString["quiz"] != null)
             {
-                if (Request.QueryString["quiz"] != null)
-            {
-                    int quizNumber = Convert.ToInt32(Request.QueryString["quiz"]);
-                    
-                    List<QuizQuestionsBO> quizQuestions = new List<QuizQuestionsBO>();
-                    QuizQuestionsBL quizQuestionsBL = new QuizQuestionsBL();
-                    quizQuestions = quizQuestionsBL.GetQuizQuestions(quizNumber);
+                int quizNumber = Convert.ToInt32(Request.QueryString["quiz"]);
+                
+                List<QuizQuestionsBO> quizQuestions;
+                QuizQuestionsBL quizQuestionsBL = new QuizQuestionsBL();
 
-                    JavaScriptSerializer ser = new JavaScriptSerializer();
-                    hf.Value = ser.Serialize(quizQuestions);
-            }
+                quizQuestions = quizQuestionsBL.GetQuizQuestions(quizNumber);
+
+                JavaScriptSerializer ser = new JavaScriptSerializer();
+                hf.Value = ser.Serialize(quizQuestions);
             }
         }
         protected void submit_Click(object sender, EventArgs e)
@@ -58,10 +56,10 @@ namespace MathChimpanzee
             QuizResultBL resultBL = new QuizResultBL();
             bool isSuccess = resultBL.SaveQuizResult(resultBO);
             if (isSuccess)
-            {
+            { 
+                //score not in query string
                 Response.Redirect("Score.aspx?s="+score_count+"&l="+qs.Count);
             }
-
         }
         
         }

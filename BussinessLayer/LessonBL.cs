@@ -12,7 +12,7 @@ namespace BussinessLayer
         public LessonBO getLesson(int id)
         {
             DataAccess d = new DataAccess();
-            LessonBO lesson = new LessonBO();
+            LessonBO lesson;
             lesson = d.getLesson(id);
             return lesson;
         }

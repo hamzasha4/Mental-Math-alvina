@@ -6,6 +6,8 @@ const canvas = document.querySelector("#c");
 const qbox = document.getElementById("Questions");
 const unit = document.getElementById("unitImage");
 const ten = document.getElementById("tenImage");
+const hf_practice = document.getElementById("practiceid");
+const pracid = parseInt(hf_practice.value);
 var qobj;
 const verifyans = document.getElementById("verifyans");
 var check = true;
@@ -82,11 +84,35 @@ function getCount(landmarks, isRightHand) {
 }
 
 function generate_random() {
+    if (pracid == 1) {
+        var x = Math.floor(Math.random() * 99);
+        qobj = { qs: (x.toString()), ans: x}
+    }
+    if (pracid == 2) {
+        var x = Math.floor(Math.random() * 9);
+        var y = Math.floor(Math.random() * 9-x);
 
-    var x = Math.floor(Math.random() * 10);
-    var y = Math.floor(Math.random() * 10);
-
-    qobj = { qs: (x.toString() + " + " + y.toString()), ans: x + y }
+        qobj = { qs: (x.toString() + " + " + y.toString()), ans: x + y }
+    }
+    if (pracid == 3) {
+        var x = Math.floor(Math.random() * 9);
+        var y = Math.floor(Math.random() * 9-x);
+        var k = x + y;
+        var z = Math.floor(Math.random() * 9-k);
+        qobj = { qs: (x.toString() + " + " + y.toString() + "-" +z.toString()), ans: x + y - z }
+    }
+    if (pracid == 4) {
+        var x = Math.floor(Math.random() * 99);
+        var y = Math.floor((Math.random() * 99-x));
+        qobj = { qs: (x.toString() + " + " + y.toString()), ans: x + y }
+    }
+    if (pracid == 5) {
+        var x = Math.floor(Math.random() * 99);
+        var y = Math.floor(Math.random() * 99 - x);
+        var k = x + y;
+        var z = Math.floor(Math.random() * 99-k);
+        qobj = { qs: (x.toString() + " + " + y.toString() + "-" + z.toString()), ans: x + y - z }
+    }
 }
 
 function showHint() {

@@ -10,9 +10,10 @@ namespace BussinessLayer
 {
     public class UserBL
     {
+        DataAccess d = new DataAccess();
         public int addUser(UserBO userBO)
         {
-            DataAccess d = new DataAccess();
+            
             bool memberExist = d.checkMemberExists(userBO);
             if (memberExist)
             {
@@ -22,17 +23,24 @@ namespace BussinessLayer
             {
                 bool isSuccessfull = d.signUpNewMember(userBO);
                 if (isSuccessfull)
-                {
-                    int id = d.getUserID(userBO.email);
-                    return id; 
-
+                { 
+                    return 1; 
                 }
                 else
                 {
-                    return 0;
+                    return 2;
                 }
             }
         }
-        
+
+        public int getUserID(string email)
+        {
+            return d.getUserID(email);
+        }
+        public UserBO getUser(string email, string password)
+        {
+            return d.GetUSer(email, password);
+        }
+
     }
 }

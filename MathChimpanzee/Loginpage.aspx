@@ -30,11 +30,11 @@
                      <div class="col">
                         <label>Email</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Test@gmail.com"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="Test@gmail.com"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" 
+                           <asp:TextBox CssClass="form-control" ID="txtpassword" runat="server" 
                                placeholder="Password" TextMode="Password"></asp:TextBox>
                         </div>
                         <div class="form-group">

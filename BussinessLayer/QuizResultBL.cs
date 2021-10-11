@@ -15,5 +15,16 @@ namespace BussinessLayer
             DataAccess d = new DataAccess();
             return d.SaveQuizResult(resultBO);
         }
+        public bool IsQuizPassed(int score,int numberQs)
+        {
+            if((score/numberQs)*100 > 50)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

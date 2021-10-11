@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using BussinessObject;
 namespace MathChimpanzee
 {
     public partial class MasterPage : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["role"] == null)
+            if (Session["user"] == null)
             {
                 LinkButton1.Visible = true; 
                 LinkButton2.Visible = true; 
@@ -20,14 +20,19 @@ namespace MathChimpanzee
                 LinkButton5.Visible = false; 
                
             }
-            else if (Session["role"] == "user")
+            else 
             {
-                LinkButton1.Visible = false; 
-                LinkButton2.Visible = false; 
-                LinkButton3.Visible = false; 
-                LinkButton4.Visible = true; 
-                LinkButton5.Visible = true;
-                LinkButton5.Text = Session["UserName"].ToString();
+                UserBO user = (UserBO)Session["user"];
+
+                if (user.role == "user")
+                {
+                    LinkButton1.Visible = false;
+                    LinkButton2.Visible = false;
+                    LinkButton3.Visible = false;
+                    LinkButton4.Visible = true;
+                    LinkButton5.Visible = true;
+                    LinkButton5.Text = user.UserName;
+                }
 
             }
            
@@ -46,10 +51,7 @@ namespace MathChimpanzee
 
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Session["username"] = "";
-            Session["fullname"] = "";
-            Session["role"] = "";
-            Session["status"] = "";
+            Session["user"] = null;
 
             LinkButton1.Visible = true;
             LinkButton2.Visible = true;

@@ -22,6 +22,8 @@
               </asp:ObjectDataSource>
               
     <asp:Button ID="btnToQuiz" runat="server" Text="Take Quiz" OnClick="btnToQuiz_Click" />
+&nbsp;<br />
+              <asp:Button ID="btntoPractice" runat="server" OnClick="btntoPractice_Click" Text="Practice" />
 </asp:Content>
 
 

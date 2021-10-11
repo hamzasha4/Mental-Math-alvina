@@ -11,7 +11,10 @@ namespace MathChimpanzee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack && Request.QueryString["practice"] != null)
+            {
+                practiceid.Value = Request.QueryString["practice"];
+            }
         }
     }
 }

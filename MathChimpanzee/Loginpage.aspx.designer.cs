@@ -7,29 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MathChimpanzee {
-    
-    
-    public partial class Login_page {
-        
+namespace MathChimpanzee
+{
+
+
+    public partial class Login_page
+    {
+
         /// <summary>
-        /// TextBox1 control.
+        /// txtemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtemail;
+
         /// <summary>
-        /// TextBox2 control.
+        /// txtpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtpassword;
+
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace MathChimpanzee {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
+
         /// <summary>
         /// Button2 control.
         /// </summary>

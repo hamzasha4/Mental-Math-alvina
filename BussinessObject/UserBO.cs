@@ -16,5 +16,6 @@ namespace BussinessObject
         public int age { get; set; }
         public int progress { get; set; }
         public int rank { get; set; }
+        public string role { get; set; }
     }
 }
