@@ -52,12 +52,14 @@ namespace DataAccessLayer
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO Users(UserName,email,password,Account_status) 
-                values(@UserName,@email,@password,@Account_status)", con);
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO Users(UserName,email,password,Account_status,Age,Progress) 
+                values(@UserName,@email,@password,@Account_status,@age,@progress)", con);
                 cmd.Parameters.AddWithValue("@UserName", userBO.UserName);
                 cmd.Parameters.AddWithValue("@email", userBO.email);
                 cmd.Parameters.AddWithValue("@password", userBO.password);
                 cmd.Parameters.AddWithValue("@Account_status", userBO.status);
+                cmd.Parameters.AddWithValue("@age", userBO.age);
+                cmd.Parameters.AddWithValue("@progress", userBO.progress);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 return true;

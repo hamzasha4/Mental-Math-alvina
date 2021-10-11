@@ -7,3 +7,11 @@ C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\DataAccessLayer\obj\D
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\bin\Debug\BussinessObject.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\bin\Debug\BussinessObject.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

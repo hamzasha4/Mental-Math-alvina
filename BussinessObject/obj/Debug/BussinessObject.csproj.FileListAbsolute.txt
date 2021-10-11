@@ -4,3 +4,8 @@ C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\D
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.csproj.CoreCompileInputs.cache
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.dll
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\BussinessObject\bin\Debug\BussinessObject.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\BussinessObject\bin\Debug\BussinessObject.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.csprojAssemblyReference.cache
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\BussinessObject\obj\Debug\BussinessObject.pdb

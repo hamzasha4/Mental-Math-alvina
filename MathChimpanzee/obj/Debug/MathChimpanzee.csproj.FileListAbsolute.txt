@@ -41,3 +41,18 @@ C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\MathChimpanzee\bin\Bu
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\MathChimpanzee\bin\Newtonsoft.Json.xml
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\MathChimpanzee\bin\DataAccessLayer.pdb
 C:\Users\Hamza Tahir\Desktop\MentalMath\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.csproj.CopyComplete
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\MathChimpanzee.dll.config
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\MathChimpanzee.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\MathChimpanzee.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\BussinessLayer.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\BussinessObject.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\Newtonsoft.Json.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\DataAccessLayer.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\BussinessLayer.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\BussinessObject.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\Newtonsoft.Json.xml
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\bin\DataAccessLayer.pdb
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.csprojAssemblyReference.cache
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.csproj.CopyComplete
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.dll
+C:\Users\Hamza.Tahir\Desktop\MentalMathRepo3\Mental-Math-alvina\MathChimpanzee\obj\Debug\MathChimpanzee.pdb
