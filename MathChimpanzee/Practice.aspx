@@ -78,15 +78,18 @@
         <span id="verifyans"></span><br />
         <br />
         <input id="hint" type="button" value="Hint" onclick="showHint()"/>
+        <br />
+        <asp:Button ID="Finish" runat="server" Text="Finish" OnClick="Finish_Click" />
         <div id="overlay" onclick="off()">
             <div id="images">
             <img id="tenImage" src="" />
             <img src="" id="unitImage"/>
         </div>
         </div>
-        <asp:HiddenField ID="practiceid" runat="server" />
+        <asp:HiddenField ID="practiceid" runat="server" ClientIDMode="Static" />
     </div>
   </div>
+    
 </div> 
     <script src="Scripts/mp_practice.js"></script>
 

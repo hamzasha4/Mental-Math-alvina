@@ -11,10 +11,20 @@ namespace MathChimpanzee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["user"] == null)
             {
-                score.Text = Request.QueryString["s"] + "/" + Request.QueryString["l"];
+                Response.Redirect("Home.aspx");
             }
+            else if (!IsPostBack)
+            {
+                score.Text = (string)Session["Score"];
+
+            }
+        }
+
+        protected void BtnToLesson_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Lessons.aspx");
         }
     }
 }

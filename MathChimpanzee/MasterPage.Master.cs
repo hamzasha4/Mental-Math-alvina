@@ -58,7 +58,7 @@ namespace MathChimpanzee
             LinkButton3.Visible = true;
             LinkButton4.Visible = false;
             LinkButton5.Visible = false;
-            Response.Redirect("Homepage.aspx");
+            Response.Redirect("Home.aspx");
 
         }
     }

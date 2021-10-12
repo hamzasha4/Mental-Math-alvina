@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div style="
+    <div style="
 background-image: url('Images/wave.png');">
 <div class="container-fluid">
 <div class="row">
@@ -39,33 +39,33 @@ background-image: url('Images/wave.png');">
 <div class="col">
 <label>User Name</label>
 <div class="form-group">
-<asp:TextBox CssClass="form-control" ID="txtusername" runat="server" placeholder="Name"></asp:TextBox>
+<asp:TextBox CssClass="form-control" ID="txtusername" runat="server" placeholder="Name" Width="357px"></asp:TextBox>
 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtusername" ErrorMessage="*User Name Required" ForeColor="Red"></asp:RequiredFieldValidator>
 </div>
 <label>Email</label>
 <div class="form-group">
-<asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="test@gmail.com"></asp:TextBox>
+<asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="test@gmail.com" Width="357px"></asp:TextBox>
 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtemail" ErrorMessage="*Email Required" ForeColor="Red"></asp:RequiredFieldValidator>
 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtemail" ErrorMessage="*Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
 </div>
 <label>Password</label>
 <div class="form-group">
 <asp:TextBox CssClass="form-control" ID="txtpassword" runat="server"
-placeholder="Password" TextMode="Password"></asp:TextBox>
-<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtpassword" ErrorMessage="*Password Required" ForeColor="Red"></asp:RequiredFieldValidator>
+placeholder="Password" TextMode="Password" Width="357px"></asp:TextBox>
+<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtpassword" ErrorMessage="*Password Required" ForeColor="Red" ></asp:RequiredFieldValidator>
 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtpassword" ErrorMessage="*Enter more than 8 character password" ValidationExpression="^[\s\S]{8,}$" ForeColor="Red"></asp:RegularExpressionValidator>
 </div>
 <label>Confirm Password</label>
 <div class="form-group">
-<asp:TextBox CssClass="form-control" ID="txtconfirmpassword" runat="server"
+<asp:TextBox CssClass="form-control" ID="txtconfirmpassword" runat="server" Width="357px" 
 placeholder="Retype Password" TextMode="Password"></asp:TextBox>
 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtpassword" ControlToValidate="txtconfirmpassword" ErrorMessage="*Password Dont Match" ForeColor="Red"></asp:CompareValidator>
 <br>
 </div>
-<label>Age</label>W
+<label>Age</label>
 <div class="form-group">
-<asp:TextBox CssClass="form-control" ID="txtage" runat="server"
-placeholder="Age" TextMode="Number" max="100" min="1"></asp:TextBox>
+<asp:TextBox CssClass="form-control" ID="txtage" runat="server" 
+placeholder="Age" TextMode="Number" max="100" min="1" Width="357px"></asp:TextBox>
 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtage" ErrorMessage="*Age Required" ForeColor="Red"></asp:RequiredFieldValidator>
 <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtage" ErrorMessage="*Enter Correct Age" MaximumValue="100" MinimumValue="1" Type="Integer" ForeColor="Red"></asp:RangeValidator>
 <br />

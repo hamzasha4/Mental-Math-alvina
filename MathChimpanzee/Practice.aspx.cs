@@ -11,10 +11,30 @@ namespace MathChimpanzee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack && Request.QueryString["practice"] != null)
+            if (Session["user"] == null)
             {
-                practiceid.Value = Request.QueryString["practice"];
+                Response.Redirect("Home.aspx");
             }
+            else
+            {
+                if (!IsPostBack)
+                {
+                    if (Request.QueryString["practice"] != null) {
+                        practiceid.Value = Request.QueryString["practice"];
+
+                    }
+                    else
+                    {
+                        Response.Redirect("Lessons.aspx");
+                    }
+                }
+            }
+        }
+
+        protected void Finish_Click(object sender, EventArgs e)
+        {
+            practiceid.Value = Request.QueryString["practice"];
+            Response.Redirect("LessonDisplay.aspx?Lesson="+ practiceid.Value);
         }
     }
 }

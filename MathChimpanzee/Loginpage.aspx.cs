@@ -17,7 +17,7 @@ namespace MathChimpanzee
             {
                 //sessions
                 Session["user"] = user;
-                Response.Redirect("Homepage.aspx");
+                Response.Redirect("Dashboard.aspx");
             }
             else
             {

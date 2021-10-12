@@ -10,9 +10,9 @@ namespace BussinessObject
     {
         public int id { get; set; }
         public int Score { get; set; }
-        public string result { get; set; }
         public int Lessonid { get; set; }
         public int Userid { get; set; }
+        public DateTime date { get; set; }
 
     }
 }

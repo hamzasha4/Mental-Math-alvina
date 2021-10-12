@@ -4,4 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Score</h1>
     <asp:Label ID="score" runat="server" Text=""></asp:Label>
+    <br />
+    <br />
+    <br />
+    <br />
+    <asp:Button ID="BtnToLesson" runat="server" Text="Lesson" OnClick="BtnToLesson_Click" />
 </asp:Content>

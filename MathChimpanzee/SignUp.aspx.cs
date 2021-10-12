@@ -29,13 +29,19 @@ namespace MathChimpanzee
             int result = userBL.addUser(userbo);
 
             if (result == 1)
-            {//correction of sessions and objects
+            {
 
                 userbo.Userid = userBL.getUserID(userbo.email);
                 Session["User"] = userbo;
-                Response.Redirect("Homepage.aspx");
+                Response.Redirect("Dashboard.aspx");
             }
-            //else conditions
-        }
+            else if(result == 0){
+                Response.Write("<script>alert('User already signed up')</script>");
+            }
+            else if(result==2)
+            {
+                Response.Write("<script>alert('Can't signup the User')</script>");
+            }
+                }
     }
 }

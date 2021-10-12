@@ -71,6 +71,34 @@ namespace DataAccessLayer
                 throw;
             }
         }
+        public bool inserttoQuizResultChild(List<QuizResultChildBO> quizResults)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                foreach (var quizresult in quizResults)
+                {
+                    SqlCommand cmd = new SqlCommand(@"INSERT INTO QuizzResultChild(QuizResultid,Question,Result) 
+                values(@QuizResultid, @Question,@Result)", con);
+                    cmd.Parameters.AddWithValue("@QuizResultid", quizresult.QuizResultid);
+                    cmd.Parameters.AddWithValue("@Question", quizresult.question_no);
+                    cmd.Parameters.AddWithValue("@Result", quizresult.result);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
 
         public bool addToCustomer(CustomersBO customersBO)
         {
@@ -132,17 +160,29 @@ namespace DataAccessLayer
                 throw (ex);
             }
         }
-        //public int getQuizID(int lessonid, string date)
-        //{
-        //    SqlConnection con = new SqlConnection(strcon);
-        //    if (con.State == ConnectionState.Closed)
-        //    {
-        //        con.Open();
-        //    }
-        //    SqlCommand cmd = new SqlCommand("SELECT * from Users where Lessonid='" + lessonid + "' And date='"+date+"' ;", con);
-        //    SqlDataReader dr = cmd.ExecuteReader();
-        //}
+ 
+        public int getQuizResultid(int id,DateTime date)
+        {
+            SqlConnection con = new SqlConnection(strcon);
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("SELECT * from QuizResult where Userid='" + id + "' and Date>='"+date+"';", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                int QuizResultid = 0;
+                while (dr.Read())
+                {
+                    QuizResultid = Convert.ToInt32(dr.GetValue(0));
+                }
+                con.Close();
+                return QuizResultid;
+            }
 
+            return 0;
+        }
         public int getUserID(string useremail)
         {
             SqlConnection con = new SqlConnection(strcon);
@@ -245,10 +285,10 @@ namespace DataAccessLayer
                 {
                     con.Open();
                 }
-                SqlCommand cmd1 = new SqlCommand(@"insert into QuizResults(Score,Result,Userid,Lessonid)
-                values(@score,@result,@userid,@lessonid)", con);
+                SqlCommand cmd1 = new SqlCommand(@"insert into QuizResult(Score,Date,Userid,Lessonid)
+                values(@score,@date,@userid,@lessonid)", con);
                 cmd1.Parameters.AddWithValue("@score", resultBO.Score);
-                cmd1.Parameters.AddWithValue("@result", resultBO.result);
+                cmd1.Parameters.AddWithValue("@date", resultBO.date);
                 cmd1.Parameters.AddWithValue("@userid", resultBO.Userid);
                 cmd1.Parameters.AddWithValue("@lessonid", resultBO.Lessonid);
                 cmd1.ExecuteNonQuery();

@@ -11,7 +11,15 @@ namespace MathChimpanzee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] == null)
+            {
+                Response.Redirect("Home.aspx");
+            }
 
+        }
+        protected void BtnToLesson_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Lessons.aspx");
         }
     }
 }

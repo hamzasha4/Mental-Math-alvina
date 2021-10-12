@@ -5,12 +5,10 @@
               
               <asp:DataList ID="DataList1" runat="server" DataSourceID="LessonsObject" >
                   <ItemTemplate>
-                      id:
+                      Lesson No :
                       <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
                       <br />
-                      video:
                       <iframe width="560" height="315" src='<%# Eval("video") %>' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                      <asp:Label ID="videoLabel" runat="server" Text='<%# Eval("video") %>' />
                       <br />
                       <br />
                   </ItemTemplate>

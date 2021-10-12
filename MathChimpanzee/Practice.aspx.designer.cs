@@ -24,6 +24,15 @@ namespace MathChimpanzee
         protected global::System.Web.UI.WebControls.Label Questions;
 
         /// <summary>
+        /// Finish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Finish;
+
+        /// <summary>
         /// practiceid control.
         /// </summary>
         /// <remarks>

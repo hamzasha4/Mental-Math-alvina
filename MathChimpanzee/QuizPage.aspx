@@ -59,7 +59,7 @@
     <span id="verifyans"></span> 
         <br />
         <br />
-        <asp:Button ID="submit" runat="server" ClientIDMode="Static" OnClick="submit_Click" Text="Button" />
+        <asp:Button ID="submit" runat="server" ClientIDMode="Static" OnClick="submit_Click" Text="Finish" Height="0px" />
 
     </div>
   </div>
