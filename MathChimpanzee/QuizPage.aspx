@@ -59,10 +59,10 @@
     <span id="verifyans"></span> 
         <br />
         <br />
-        <asp:Button ID="submit" runat="server" ClientIDMode="Static" OnClick="submit_Click" Text="Finish" Height="0px" />
+        <asp:Button class="btn btn-outline-danger btn-lg" ID="submit" runat="server" ClientIDMode="Static" OnClick="submit_Click" Text="Finish" />
 
     </div>
   </div>
 </div> 
-    <script src="Scripts/mp7.js"></script>
+    <script src="Scripts/mp8.js"></script>
 </asp:Content>

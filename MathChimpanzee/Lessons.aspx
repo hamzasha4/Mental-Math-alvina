@@ -2,14 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-                            <div>
+                            <div class="text-center">
                         <div class="form-group">
-                           <asp:Button class="btn btn-info btn-block" ID="btnLesson1" runat="server" Text="Lesson1" OnClick="btnLesson1_Click" />
+                            <br />
+                           <asp:Button class="btn btn-success btn-block" ID="btnLesson1" runat="server" Text="Lesson1" OnClick="btnLesson1_Click" />
                         </div>
                      </div>
                             <div>
                         <div class="form-group">
-                           <asp:Button class="btn btn-info btn-block" ID="Button1" runat="server" Text="Lesson2" OnClick="btnLesson2_Click" />
+                           <asp:Button class="btn btn-success btn-block" ID="Button1" runat="server" Text="Lesson2" OnClick="btnLesson2_Click" />
                         </div>
                      </div>
                             <br />
