@@ -21,5 +21,9 @@ namespace MathChimpanzee
         {
             Response.Redirect("Lessons.aspx");
         }
+        protected void BtnToPractice_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Practice.aspx?practice=1");
+        }
     }
 }

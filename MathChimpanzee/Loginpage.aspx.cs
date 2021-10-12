@@ -8,7 +8,7 @@ namespace MathChimpanzee
         protected void Page_Load(object sender, EventArgs e)
         {
         }
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             UserBO user;
             UserBL userBL = new UserBL();
@@ -25,7 +25,7 @@ namespace MathChimpanzee
                 Response.Write("<script>alert('Invalid credentials');</script>");
             }
         }
-        protected void Button2_Click(object sender, System.EventArgs e)
+        protected void btnToSignUp_Click(object sender, System.EventArgs e)
         {
             Response.Redirect("SignUp.aspx");
         }

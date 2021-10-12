@@ -38,10 +38,10 @@
                                placeholder="Password" TextMode="Password" Width="400px"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                           <asp:Button class="btn btn-outline-success btn-block" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                           <asp:Button class="btn btn-outline-success btn-block" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
                         </div>
                         <div class="form-group">
-               <asp:Button class="btn btn-outline-info btn-block" ID="Button2" runat="server" Text="SignUp" OnClick="Button2_Click" />
+               <asp:Button class="btn btn-outline-info btn-block" ID="btnToSignUp" runat="server" Text="SignUp" OnClick="btnToSignUp_Click" />
 
                         </div>
                      </div>

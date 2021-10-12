@@ -11,7 +11,7 @@ namespace MathChimpanzee
 
         }
 
-        protected void Button8_Click(object sender, EventArgs e)
+        protected void btnSignUp_Click(object sender, EventArgs e)
         {
             UserBL userBL = new UserBL();
 

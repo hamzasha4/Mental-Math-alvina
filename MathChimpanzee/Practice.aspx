@@ -77,9 +77,8 @@
         
         <span id="verifyans"></span><br />
         <br />
-        <input id="hint" type="button" value="Hint" onclick="showHint()"/>
-        <br />
-        <asp:Button ID="Finish" runat="server" Text="Finish" OnClick="Finish_Click" />
+        <input id="hint" class="btn btn-outline-success btn-lg" type="button" value="Hint" onclick="showHint()"/>
+        <asp:Button CssClass="btn btn-danger btn-lg" ID="Finish" runat="server" Text="Finish" OnClick="Finish_Click" />
         <div id="overlay" onclick="off()">
             <div id="images">
             <img id="tenImage" src="" />

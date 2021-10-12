@@ -33,21 +33,14 @@
           </ul>
         </div>
         <div class="content">
-            <asp:Button ID="BtnToLesson" runat="server" Text="Lesson" OnClick="BtnToLesson_Click" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Button CssClass="btn btn-outline-info btn-block" ID="BtnToLesson" runat="server" Text="Lessons" OnClick="BtnToLesson_Click" />
+            <br />
+            <asp:Button CssClass="btn btn-outline-danger btn-block" ID="BtnToPractice" runat="server" Text="Practice" OnClick="BtnToPractice_Click" />
 
-            <div class="bg-image hover-overlay">
-  <img src="Images/icons8-online-education-50.png"/>
-  <div
-    class="mask"
-    style="
-      background: linear-gradient(
-        45deg,
-        rgba(29, 236, 197, 0.5),
-        rgba(91, 14, 214, 0.5) 100%
-      );
-    "
-  ></div>
-</div>
             </div>
         </div>
     </div>

@@ -72,7 +72,7 @@ placeholder="Age" TextMode="Number" max="100" min="1" Width="357px"></asp:TextBo
 <br>
 </div>
 <div class="form-group">
-<asp:Button class="btn btn-info btn-block" ID="Button8" runat="server" Text="Sign Up" OnClick="Button8_Click"/>
+<asp:Button class="btn btn-info btn-block" ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click"/>
 </div>
 </div>
 </div>
