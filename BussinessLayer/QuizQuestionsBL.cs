@@ -12,8 +12,15 @@ namespace BussinessLayer
     {
         public List<QuizQuestionsBO> GetQuizQuestions(int Lessonid)
         {
-            DataAccess d = new DataAccess();
-            return d.GetQuizQuestions(Lessonid);
+            try
+            {
+                DataAccess d = new DataAccess();
+                return d.GetQuizQuestions(Lessonid);
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

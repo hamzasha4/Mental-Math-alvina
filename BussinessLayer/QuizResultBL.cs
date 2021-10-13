@@ -12,33 +12,42 @@ namespace BussinessLayer
     {
         public int SaveQuizResult(QuizResultBO resultBO, List<QuizScoreBO> Scores)
         {
-            DataAccess d = new DataAccess();
-            if (d.SaveQuizResult(resultBO))
+            try
             {
-                int quizid = d.getQuizResultid(resultBO.Userid, resultBO.date);
-                List<QuizResultChildBO> quizResultChildren = new List<QuizResultChildBO>();
-                if(quizid > 0)
+                DataAccess d = new DataAccess();
+                if (d.SaveQuizResult(resultBO))
                 {
-                    foreach (var r in Scores)
+                    int quizid = d.getQuizResultid(resultBO.Userid, resultBO.date);
+                    List<QuizResultChildBO> quizResultChildren = new List<QuizResultChildBO>();
+                    if (quizid > 0)
                     {
-                        QuizResultChildBO childBO = new QuizResultChildBO();
-                        childBO.QuizResultid = quizid;
-                        childBO.question_no = Convert.ToInt32(r.id);
-                        if (r.result == "true")
+                        foreach (var r in Scores)
                         {
-                            childBO.result = 1;
+                            QuizResultChildBO childBO = new QuizResultChildBO();
+                            childBO.QuizResultid = quizid;
+                            childBO.question_no = Convert.ToInt32(r.id);
+                            if (r.result == "true")
+                            {
+                                childBO.result = 1;
+                            }
+                            else
+                            {
+                                childBO.result = 0;
+                            }
+                            quizResultChildren.Add(childBO);
                         }
-                        else
+                        if (d.inserttoQuizResultChild(quizResultChildren))
                         {
-                            childBO.result = 0;
+                            return 1;
                         }
-                        quizResultChildren.Add(childBO);
                     }
-                if(d.inserttoQuizResultChild(quizResultChildren))
-                    { return 1;}
                 }
+                return -1;
             }
-            return 0;
+            catch
+            {
+                return -1;
+            }
         }
         
         public bool IsQuizPassed(int score,int numberQs)

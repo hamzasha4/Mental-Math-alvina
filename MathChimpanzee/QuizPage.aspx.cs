@@ -23,7 +23,10 @@ namespace MathChimpanzee
                     QuizQuestionsBL quizQuestionsBL = new QuizQuestionsBL();
 
                     quizQuestions = quizQuestionsBL.GetQuizQuestions(quizNumber);
-
+                    if(quizQuestions == null)
+                {
+                    Response.Redirect("Error.aspx");
+                }
                     JavaScriptSerializer ser = new JavaScriptSerializer();
                     hf.Value = ser.Serialize(quizQuestions);
                 }
@@ -59,7 +62,15 @@ namespace MathChimpanzee
                 Session["Score"] = score_count + "/" + qs.Count.ToString();
                 Response.Redirect("Score.aspx");
             }
+            if(isSuccess  == -1)
+            {
+                Response.Redirect("Error.aspx");
+            }
         }
-        
+        protected void Page_Error(object sender, EventArgs e)
+        {
+            Response.Redirect("Error.aspx");
         }
+
+    }
     }

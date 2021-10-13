@@ -39,7 +39,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                throw;
+                return false;
             }
         }
 
@@ -68,7 +68,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                throw;
+                return false;
             }
         }
         public bool inserttoQuizResultChild(List<QuizResultChildBO> quizResults)
@@ -95,34 +95,8 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                throw;
+                return false;
             }
-        }
-
-
-        public bool addToCustomer(CustomersBO customersBO)
-        {
-            try
-            {
-                SqlConnection con2 = new SqlConnection(strcon);
-                if (con2.State == ConnectionState.Closed)
-                {
-                    con2.Open();
-                }
-                SqlCommand cmd1 = new SqlCommand(@"insert into Customers(Userid,Name,Age,Progress)values(@Userid,@Name,@Age,@progress)", con2);
-                cmd1.Parameters.AddWithValue("@Userid", customersBO.Userid);
-                cmd1.Parameters.AddWithValue("@Name", customersBO.name);
-                cmd1.Parameters.AddWithValue("@Age", customersBO.age);
-                cmd1.Parameters.AddWithValue("@progress", customersBO.progress);
-                cmd1.ExecuteNonQuery();
-                con2.Close();
-                return true;
-            }
-            catch
-            {
-                throw;
-            }
-
         }
 
         public UserBO GetUSer(string email, string password)
@@ -157,54 +131,67 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                throw (ex);
+                return null;
             }
         }
  
         public int getQuizResultid(int id,DateTime date)
         {
-            SqlConnection con = new SqlConnection(strcon);
-            if (con.State == ConnectionState.Closed)
+            try
             {
-                con.Open();
-            }
-            SqlCommand cmd = new SqlCommand("SELECT * from QuizResult where Userid='" + id + "' and Date>='"+date+"';", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                int QuizResultid = 0;
-                while (dr.Read())
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
                 {
-                    QuizResultid = Convert.ToInt32(dr.GetValue(0));
+                    con.Open();
                 }
-                con.Close();
-                return QuizResultid;
-            }
+                SqlCommand cmd = new SqlCommand("SELECT * from QuizResult where Userid='" + id + "' and Date>='" + date + "';", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    int QuizResultid = 0;
+                    while (dr.Read())
+                    {
+                        QuizResultid = Convert.ToInt32(dr.GetValue(0));
+                    }
+                    con.Close();
+                    return QuizResultid;
+                }
 
-            return 0;
+                return 0;
+            }
+            catch
+            {
+                return -1;
+            }
         }
         public int getUserID(string useremail)
         {
-            SqlConnection con = new SqlConnection(strcon);
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
-            SqlCommand cmd = new SqlCommand("SELECT * from Users where email='" + useremail + "';", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.HasRows)
-            {
-                int id = 0 ;
-                while (dr.Read())
+            try {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
                 {
-                   id  = Convert.ToInt32(dr.GetValue(0));
+                    con.Open();
                 }
-                con.Close();
-                return id;
-            }
+                SqlCommand cmd = new SqlCommand("SELECT * from Users where email='" + useremail + "';", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    int id = 0;
+                    while (dr.Read())
+                    {
+                        id = Convert.ToInt32(dr.GetValue(0));
+                    }
+                    con.Close();
+                    return id;
+                }
 
-            return 0;
-        }
+                return 0;
+            }
+            catch
+            {
+                return -1;
+            }
+            }
 
         public LessonBO getLesson(int id)
         {
@@ -234,7 +221,7 @@ namespace DataAccessLayer
             }
             catch (Exception)
             {
-                throw;
+                return null;
             }
 
         }
@@ -272,7 +259,7 @@ namespace DataAccessLayer
             catch (Exception)
             {
 
-                throw;
+                return null;
             }
         }
 
@@ -297,7 +284,7 @@ namespace DataAccessLayer
             }
             catch
             {
-                throw;
+                return false;
             }
         }
 

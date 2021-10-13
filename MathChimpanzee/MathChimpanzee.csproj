@@ -76,6 +76,7 @@
     <Content Include="Content\Images\finger-counting-pics\8.png" />
     <Content Include="Content\Images\finger-counting-pics\9.png" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="fonts\nucleo-icons.svg" />
     <Content Include="Home.aspx" />
     <Content Include="Images\dsahboard.png" />
@@ -1848,6 +1849,13 @@
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
